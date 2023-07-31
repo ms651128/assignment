@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    margin-top: 0;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+.title{
+    font-size: 50px;
+    margin: 20px;
+}
+label{
+
+}
+input{
+    width: 20%;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+
+}
+input:focus{
+    outline: none;
+}
+.btn{
+    width: 200px;
+    padding: 20px;
+    background-color: rgb(116, 118, 233);
+    font-size: 15px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.flights{
+    margin: 50px;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.cards{
+    width: 90%;
+   
+   
+}
+.card{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    font-size: 25px;
+    padding: 30px;
+    
+}
+.card-head{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    font-size: 25px;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+.col{
+    text-align: start;
+    width: 20%;
+    margin-right: 10px;
+}
+.noflight{
+    padding: 50px;
+    font-size: 20px;
+}

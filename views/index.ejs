@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="title">Search for a flight</div>
+        <form action="/flight" method="post">
+            <input type="text" name="source" required placeholder="Source">
+            <input type="text" name="destination" required placeholder="Destination">
+            <input type="date" name="date">
+            <div><button class="btn" type="submit">Search</button></div>  
+        </form>
+    </header>
+    <section class="flights">
+        <% if (data && data.flights && data.flights.length === 0) { %>
+            <div class="noflight">No Flight Found</div>
+        <% } else { %>
+
+        <% if(data.flights.length > 0) { %>
+        <div class="cards">
+            <div class="card-head">
+                <div class="col">Airline</div>
+                <div class="col">Source</div>
+                <div class="col">Destination</div>
+                <div class="col">Time</div>
+                <div class="col">Date</div>
+                <div class="col">Price</div>
+             </div>
+            <% data.flights.forEach(function(flight) { %>
+            <div class="card">
+               <div class="col"><%= flight.airline %></div>
+               <div class="col"><%= flight.source %></div>
+               <div class="col"><%= flight.destination %></div>
+               <div class="col"><%= flight.time %></div>
+               <div class="col"><%= flight.date %></div>
+               <div class="col"><%= flight.price %></div>
+            </div>
+        <% }) %>
+        </div>
+        <% } } %>
+    </section>
+</body>
+</html>
