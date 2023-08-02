@@ -14,7 +14,7 @@ server.get('/',(req,res)=>{
 
 server.post('/flight', async(req,res)=>{
     const {source,destination,date} = req.body; 
-    const flights = data.flights.filter(flight => flight.source.toLowerCase() === source.toLowerCase() && flight.destination.toLowerCase() === destination.toLowerCase());
+    const flights = data.flights.filter(flight => flight.source.toLowerCase() === source.toLowerCase().trim() && flight.destination.toLowerCase() === destination.toLowerCase().trim());
     
     if (date) {
         flights = flights.filter((flight) => flight.date === date);
